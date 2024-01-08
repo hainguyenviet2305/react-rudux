@@ -80,7 +80,7 @@ const RenderArrayObject = ({ result, onDelete, isloading }) => {
             checked={isDark}
             onChange={(e) => setIsDark(e.target.checked)}
           />
-          Dark mode
+          Dark
         </label>
         <div>
         <TableOutlined rotate={180} spin style={{color: isDark ? "black" : "red", fontSize: "40px"}}/>

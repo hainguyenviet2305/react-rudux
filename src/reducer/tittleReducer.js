@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-export const titleReducer = createSlice({
+export const titleReducerSimple = createSlice({
   name: "titleReducer",
   initialState: {
     title: "redux numberone",
+    number: 1,
   },
   // caculator sate
   reducers: {
@@ -11,10 +12,13 @@ export const titleReducer = createSlice({
       console.log(state, "state");
       state.title = "state modify";
     },
+    changeTextWithIp : (state, actions) => {
+      state.title = actions.payload;
+    }
   },
 });
 
 // Action creators are generated for each case reducer function
-export const { changeState } = titleReducer.actions;
+export const { changeState, changeTextWithIp } = titleReducerSimple.actions;
 
-export default titleReducer.reducer;
+export default titleReducerSimple.reducer;
