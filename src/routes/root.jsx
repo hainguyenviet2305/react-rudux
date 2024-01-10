@@ -16,7 +16,7 @@ export default function Root() {
   return (
     <>
       <ThemeContext.Provider value={initialConntext}>
-        <div style={{display: "flex", height: "100%"}}>
+        <div style={{display: "flex", height: "100%"}} className={initialConntext.theme ? "dark" : "light"}>
           <div id="sidebar" >
             <h1>Demo React</h1>
             <div>

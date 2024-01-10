@@ -5,7 +5,7 @@ import { Outlet } from "react-router-dom";
 const RootRightCmp = () => {
   const storeContext = useContext(ThemeContext);
   return (
-    <div id="detail" className={storeContext.theme ? "dark" : "light"}>
+    <div id="detail" >
       <Outlet></Outlet>
     </div>
   );
